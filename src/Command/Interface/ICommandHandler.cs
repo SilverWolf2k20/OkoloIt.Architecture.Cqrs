@@ -1,6 +1,6 @@
-﻿using Istok.Utilities.Result;
+﻿using OkoloIt.Utilities.Result;
 
-namespace Istok.ProductTree.Cqrs.Command
+namespace OkoloIt.Architecture.Cqrs.Command
 {
     /// <summary>
     /// Интерфейс описания команды.

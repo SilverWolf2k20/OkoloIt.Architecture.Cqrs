@@ -1,4 +1,4 @@
-﻿namespace Istok.ProductTree.Cqrs.Query
+﻿namespace OkoloIt.Architecture.Cqrs.Query
 {
     /// <summary>
     /// Интерфейс описания запроса.
