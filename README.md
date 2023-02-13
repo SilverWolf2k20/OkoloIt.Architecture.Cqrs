@@ -1,0 +1,1 @@
+# OkoloIt.Architecture.Cqrs
