@@ -1,11 +1,9 @@
-﻿using OkoloIt.Utilities.Result;
-
-namespace OkoloIt.Architecture.Cqrs.Command
+﻿namespace OkoloIt.Architecture.Cqrs.Command
 {
     /// <summary>
     /// Интерфейс диспетчера команд.
     /// </summary>
-    public interface ICommandDispatcher
+    public interface ICommandDispatcher<out TResult>
     {
         #region Public Methods
 
@@ -15,7 +13,7 @@ namespace OkoloIt.Architecture.Cqrs.Command
         /// <typeparam name="TCommand">Тип команды.</typeparam>
         /// <param name="command">Данные запроса.</param>
         /// <returns>Результат запроса.</returns>
-        public IResult Handle<TCommand>(TCommand command) 
+        public TResult Handle<TCommand>(TCommand command) 
             where TCommand : ICommand;
 
         #endregion Public Methods

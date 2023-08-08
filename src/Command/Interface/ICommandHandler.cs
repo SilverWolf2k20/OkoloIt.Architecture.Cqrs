@@ -1,12 +1,10 @@
-﻿using OkoloIt.Utilities.Result;
-
-namespace OkoloIt.Architecture.Cqrs.Command
+﻿namespace OkoloIt.Architecture.Cqrs.Command
 {
     /// <summary>
     /// Интерфейс описания команды.
     /// </summary>
     /// <typeparam name="TCommand">Тип принимаемых данных команды.</typeparam>
-    public interface ICommandHandler<in TCommand>
+    public interface ICommandHandler<in TCommand, out TResult>
         : ICommand where TCommand
         : ICommand
     {
@@ -17,7 +15,7 @@ namespace OkoloIt.Architecture.Cqrs.Command
         /// </summary>
         /// <param name="command">Данные для команды.</param>
         /// <returns>Результат команды.</returns>
-        public IResult Handle(TCommand command);
+        public TResult Handle(TCommand command);
 
         #endregion Public Methods
     }

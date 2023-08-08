@@ -1,11 +1,9 @@
-﻿using OkoloIt.Utilities.Result;
-
-namespace OkoloIt.Architecture.Cqrs.Command
+﻿namespace OkoloIt.Architecture.Cqrs.Command
 {
     /// <summary>
     /// Диспетчер команд.
     /// </summary>
-    public class CommandDispatcher : ICommandDispatcher
+    public class CommandDispatcher<TResult> : ICommandDispatcher<TResult>
     {
         #region Private Fields
 
@@ -32,13 +30,16 @@ namespace OkoloIt.Architecture.Cqrs.Command
         /// <typeparam name="TCommand">Тип команды.</typeparam>
         /// <param name="command">Данные запроса.</param>
         /// <returns>Результат запроса.</returns>
-        public IResult Handle<TCommand>(TCommand command)
+        public TResult Handle<TCommand>(TCommand command)
             where TCommand : ICommand
         {
-            var service = _provider.GetService(typeof(ICommandHandler<TCommand>))
-                as ICommandHandler<TCommand>;
+            var service = _provider.GetService(typeof(ICommandHandler<TCommand, TResult>))
+                as ICommandHandler<TCommand, TResult>;
 
-            return service?.Handle(command) ?? Result.Fail("Не удалось выполнить команду.");
+            if (service is null)
+                throw new NotImplementedException("Отсутствует данная команда.");
+
+            return service.Handle(command);
         }
 
         #endregion Public Methods
