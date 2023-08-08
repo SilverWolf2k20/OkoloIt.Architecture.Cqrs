@@ -1,9 +1,8 @@
-﻿namespace OkoloIt.Architecture.Cqrs.Command
+﻿namespace OkoloIt.Architecture.Cqrs.Command;
+
+/// <summary>
+/// Интерфейс описания данных для команды.
+/// </summary>
+public interface ICommand
 {
-    /// <summary>
-    /// Интерфейс описания данных для команды.
-    /// </summary>
-    public interface ICommand
-    {
-    }
 }
