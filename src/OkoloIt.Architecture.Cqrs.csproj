@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <Company>Okolo IT</Company>
     <Authors>Okolo IT</Authors>
-    <Version>1.0.0</Version>
-    <FileVersion>1.0.0.0</FileVersion>
+    <Version>2.0.0</Version>
+    <FileVersion>2.0.0.0</FileVersion>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <Description>Architectural design pattern Command and Query Responsibility Segregation.</Description>
     <AssemblyName>OkoloIt.Architecture.Cqrs</AssemblyName>
