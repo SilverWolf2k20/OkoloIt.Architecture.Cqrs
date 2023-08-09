@@ -1,6 +1,6 @@
 # OkoloIt.Architecture.Cqrs
 
-![coverage](https://img.shields.io/badge/version-1.0.0-blue) ![coverage](https://img.shields.io/badge/-Okolo%20IT-orange)
+![coverage](https://img.shields.io/badge/version-2.0.0-blue) ![coverage](https://img.shields.io/badge/-Okolo%20IT-orange)
 ![alt text](https://github.com/open-telemetry/opentelemetry-dotnet/actions/workflows/linux-ci.yml/badge.svg?branch=main)
 ![alt text](https://github.com/open-telemetry/opentelemetry-dotnet/actions/workflows/windows-ci.yml/badge.svg?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/SilverWolf2k20/OkoloIt.Utilities.Result/blob/master/LICENSE.md)
